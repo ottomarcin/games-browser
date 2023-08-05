@@ -5,17 +5,15 @@ import GameCardSkeleton from './GameCardSkeleton';
 import GameCardContainer from './GameCardContainer';
 import { Genre } from '../hooks/useGenres';
 import { useEffect } from 'react';
+import { Platform } from '../hooks/usePlatforms';
+import { GameQuery } from '../App';
 
 interface Props {
-  selectedGenre: Genre | null;
+  gameQuery: GameQuery;
 }
 
-const GameGrid = ({ selectedGenre }: Props) => {
-  const { data, error, isLoading }: GamesData = useGames(selectedGenre);
-
-  useEffect(() => {
-    console.log(selectedGenre);
-  }, [selectedGenre]);
+const GameGrid = ({ gameQuery }: Props) => {
+  const { data, error, isLoading }: GamesData = useGames(gameQuery);
 
   return (
     <>
