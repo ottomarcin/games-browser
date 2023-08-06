@@ -1,4 +1,4 @@
-import useData, { DataType } from './useData';
+import useData from './useData';
 import { Genre } from './useGenres';
 import { GameQuery } from '../App';
 
@@ -31,6 +31,7 @@ const useGames = (gameQuery: GameQuery) =>
       params: {
         genres: gameQuery.genre?.id,
         parent_platforms: gameQuery.platform?.id,
+        ordering: gameQuery.sortOrder,
       },
     },
     [gameQuery]
