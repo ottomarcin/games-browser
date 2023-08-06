@@ -24,6 +24,8 @@ const useData = <T>(
 
   useEffect(
     () => {
+      setLoading(true);
+      setData([]);
       const controller = new AbortController();
       apiClient
         .get<FetchResponse<T>>(endpoint, {

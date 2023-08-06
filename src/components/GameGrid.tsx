@@ -24,7 +24,7 @@ const GameGrid = ({ gameQuery }: Props) => {
         width='100%'
       >
         {isLoading &&
-          [...new Array(6).keys()].map((e) => (
+          [...new Array(20).keys()].map((e) => (
             <GameCardContainer key={e}>
               <GameCardSkeleton key={e} />
             </GameCardContainer>

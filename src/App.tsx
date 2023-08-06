@@ -34,9 +34,7 @@ function App() {
           onSearch={(value) =>
             setGameQuery({ ...gameQuery, searchText: value })
           }
-          onIconClick={() =>
-            setGameQuery({ ...gameQuery, platform: null, genre: null })
-          }
+          onIconClick={() => setGameQuery({} as GameQuery)}
         />
       </GridItem>
       <Show above='lg'>
