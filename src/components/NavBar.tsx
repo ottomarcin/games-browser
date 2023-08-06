@@ -7,9 +7,10 @@ import SearchInput from './SearchInput';
 interface Props {
   onIconClick: Function;
   onSearch: (value: string) => void;
+  searchText: string;
 }
 
-const NavBar = ({ onIconClick, onSearch }: Props) => {
+const NavBar = ({ onIconClick, onSearch, searchText }: Props) => {
   return (
     <HStack padding='10px'>
       <Image
@@ -18,7 +19,7 @@ const NavBar = ({ onIconClick, onSearch }: Props) => {
         onClick={() => onIconClick()}
         cursor='pointer'
       />
-      <SearchInput onSearch={onSearch} />
+      <SearchInput searchText={searchText} onSearch={onSearch} />
       <ColorModeSwitch />
     </HStack>
   );
