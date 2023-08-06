@@ -16,6 +16,7 @@ export interface Game {
   metacritic: number;
   genres: Genre[];
   slug: string;
+  rating_top: number;
 }
 
 export interface GamesData {
